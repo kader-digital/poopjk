@@ -1,10 +1,13 @@
 const fs = require("fs");
+
 class Map {
 
 	constructor () {
 	
 		this.map = new Array();
-		this.raw = this.load();
+		this.data = this.load();
+		this.data = this.format();	
+		console.log(this.map);
 
 	}
 
@@ -17,6 +20,16 @@ class Map {
 			list[i] = list[i].split(' ');
 		}
 		return list;
+	}
+
+	format () {
+		
+		var t;
+		for (var i = 0; i < this.data.length-1; i++) {
+			t = new Table (this.data[i][0],this.data[i][1]);
+			this.map[i] = t;		
+		}		
+
 	}
 
 }

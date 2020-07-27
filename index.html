@@ -4,6 +4,7 @@
 	<head>
 		<title>test site</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="Time.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -27,14 +28,6 @@
 						<label for="day">Day: </label>
 						<input type="text" id="day">
 						<br>
-						<script>
-							var day = new Date();
-							var dayField = document.getElementById("day");							
-							
-							dayField.value = day.toString().slice(4,15);
-
-						</script>
-
 						<label for="resTime">Time Of Arrival: </label>
 						<select>
 							<script src="generate.js"></script>
